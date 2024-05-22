@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const connectMongo = require('./db/connectMongo'); // Ensure this properly sets up and exports the MongoDB connection.
 
 const app = express();
 
@@ -12,8 +13,11 @@ app.get('/', (req, res) => {
   res.send('Flight Information API is running!');
 });
 
+// MongoDB Connection
+connectMongo();
+
 // Set the port and start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
