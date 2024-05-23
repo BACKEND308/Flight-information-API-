@@ -343,6 +343,16 @@ def main():
 
     # for data in flight_information_data:
     #     insert_flight_information(db, data)
+
+     # # Example: Transfer 'flight_info' from MongoDB to a new MySQL table 'flight_sql'
+    # collection_name = 'flight_information'  # Adjust the collection name as needed
+    # data = fetch_data_from_mongodb(db, collection_name)  
+    # if data:
+    #     print(f"Fetched {len(data)} documents from MongoDB collection '{collection_name}'")
+    #     create_table_and_insert_data(engine, data, 'flights_sql')  # Adjust the SQL table name as needed
+    # else:
+    #     print(f"No data found in MongoDB collection '{collection_name}'")
+
   
 if __name__ == '__main__':
     main()
