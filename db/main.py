@@ -1,7 +1,5 @@
 from connect import connectDB
 
-
-
 def insert_flight_information(db, flight_information_data):
     flight_information_collection = db.flight_information
     result = flight_information_collection.insert_one(flight_information_data)
