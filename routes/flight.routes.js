@@ -8,12 +8,13 @@ router.post('/flights', async (req, res) => {
   try {
     const newFlight = new Flight({
       FlightNumber: req.body.FlightNumber,
-      DepartureAirport: req.body.DepartureAirport,
-      ArrivalAirport: req.body.ArrivalAirport,
-      FlightDate: req.body.FlightDate,
-      DepartureTime: req.body.DepartureTime,
-      ArrivalTime: req.body.ArrivalTime,
-      Price: req.body.Price
+      Date: req.body.Date,
+      FlightDuration: req.body.FlightDuration,
+      FlightDistance: req.body.FlightDistance,
+      FlightSource: req.body.FlightSource,
+      FlightDestination: req.body.FlightDestination,
+      VehicleType: req.body.VehicleType,
+      SharedFlightInfo: req.parse.SharedFlightInfo
     });
     await newFlight.save();
     res.status(201).json(newFlight);
@@ -49,7 +50,7 @@ router.get('/flights/:FlightNumber', async (req, res) => {
 router.patch('/flights/:FlightNumber', async (req, res) => {
   try {
     const flight = await Flight.findOneAndUpdate(
-      { FlightNumber: req.params.FlightNumber },
+      { FlightNumber: req.params.FightNumber },
       req.body,
       { new: true }
     );
@@ -71,9 +72,8 @@ router.delete('/flights/:FlightNumber', async (req, res) => {
     }
     res.send({ message: 'Flight deleted successfully' });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.getCode() });
   }
 });
 
 module.exports = router;
-
