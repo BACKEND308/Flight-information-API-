@@ -29,7 +29,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 737",
                 "Capacity": 188,
-                "SeatingPlan": "Standard",
                 "StandardMenu": "Standard Menu"
             },
             "SharedFlightInfo": {
@@ -62,7 +61,6 @@ def main():
             "VehicleType": {
                 "Model": "Airbus A320",
                 "Capacity": 150,
-                "SeatingPlan": "Economy",
                 "StandardMenu": "Vegetarian Menu"
             },
             "SharedFlightInfo": {
@@ -95,7 +93,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 777",
                 "Capacity": 300,
-                "SeatingPlan": "Business",
                 "StandardMenu": "Premium Menu"
             },
             "SharedFlightInfo": {
@@ -128,7 +125,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 747",
                 "Capacity": 400,
-                "SeatingPlan": "Economy",
                 "StandardMenu": "Mexican Menu"
             },
             "SharedFlightInfo": {
@@ -161,7 +157,6 @@ def main():
             "VehicleType": {
                 "Model": "Airbus A330",
                 "Capacity": 250,
-                "SeatingPlan": "Business",
                 "StandardMenu": "Southern Menu"
             },
             "SharedFlightInfo": {
@@ -194,7 +189,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 757",
                 "Capacity": 200,
-                "SeatingPlan": "Economy",
                 "StandardMenu": "Canadian Menu"
             },
             "SharedFlightInfo": {
@@ -227,7 +221,6 @@ def main():
             "VehicleType": {
                 "Model": "Airbus A380",
                 "Capacity": 500,
-                "SeatingPlan": "First Class",
                 "StandardMenu": "Seafood Menu"
             },
             "SharedFlightInfo": {
@@ -260,7 +253,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 737 Max",
                 "Capacity": 190,
-                "SeatingPlan": "Economy",
                 "StandardMenu": "Orlando Menu"
             },
             "SharedFlightInfo": {
@@ -293,7 +285,6 @@ def main():
             "VehicleType": {
                 "Model": "Airbus A350",
                 "Capacity": 280,
-                "SeatingPlan": "Business",
                 "StandardMenu": "Desert Menu"
             },
             "SharedFlightInfo": {
@@ -326,7 +317,6 @@ def main():
             "VehicleType": {
                 "Model": "Boeing 787",
                 "Capacity": 260,
-                "SeatingPlan": "Premium Economy",
                 "StandardMenu": "British Menu"
             },
             "SharedFlightInfo": {
