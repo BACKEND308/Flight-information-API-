@@ -14,7 +14,7 @@ router.post('/flights', async (req, res) => {
       FlightSource: req.body.FlightSource,
       FlightDestination: req.body.FlightDestination,
       VehicleType: req.body.VehicleType,
-      SharedFlightInfo: req.parse.SharedFlightInfo
+      SharedFlightInfo: req.body.SharedFlightInfo
     });
     await newFlight.save();
     res.status(201).json(newFlight);
@@ -24,14 +24,17 @@ router.post('/flights', async (req, res) => {
 });
 
 // GET route to retrieve all flights
-router.get('/flights', async (req, res) => {
+router.get('/get/flights', async (req, res) => {
   try {
     const flights = await Flight.find();
+    console.log(flights); // Log the fetched flights to the console
     res.status(200).json(flights);
   } catch (error) {
+    console.error("Error fetching flights:", error);
     res.status(500).json({ error: error.message });
   }
 });
+
 
 // GET route to retrieve a single flight by FlightNumber
 router.get('/flights/:FlightNumber', async (req, res) => {
