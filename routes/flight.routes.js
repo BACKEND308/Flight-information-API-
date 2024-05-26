@@ -24,7 +24,7 @@ router.post('/flights', async (req, res) => {
 });
 
 // GET route to retrieve all flights
-router.get('/get/flights', async (req, res) => {
+router.get('/flights', async (req, res) => {
   try {
     const flights = await Flight.find();
     console.log(flights); // Log the fetched flights to the console
